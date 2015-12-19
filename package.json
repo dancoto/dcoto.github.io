@@ -1,0 +1,23 @@
+{
+  "name": "dcoto.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcoto/dcoto.github.io.git"
+  },
+  "author": "Daniel Coto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcoto/dcoto.github.io/issues"
+  },
+  "homepage": "https://github.com/dcoto/dcoto.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}
