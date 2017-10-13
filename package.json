@@ -10,7 +10,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "git checkout master; cp -r build/* .; rm -rf build; git commit -a -m 'deploy'; git push; git checkout develop",
+    "deploy": "git checkout master; cp -r build/* .; rm -rf build; git add -a; git commit -a -m 'deploy'; git push; git checkout develop; rm -rf static",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
