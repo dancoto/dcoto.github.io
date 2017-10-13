@@ -12,7 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "npm run adjust; git checkout master; find build -type f -exec mv {} . \\;;  git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
     "nodeploy": "npm run build; npm run adjust; git checkout master; find build -type f -exec mv {} . \\;;",
-    "adjust": "replace-in-file /static/css/ / build/**/*.html; replace-in-file /static/js/ / build/**/*.html; replace-in-file /static/media/ / build/**/*.html; replace-in-file /static/media/ / build/**/*.js",
+    "adjust": "replace-in-file /static/css/ / build/**/*.html; replace-in-file /static/js/ / build/**/*.html; replace-in-file /static/media/ / build/**/*.html; replace-in-file /static/media/ / build/**/*.js; replace-in-file static/media/ / build/**/*.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
