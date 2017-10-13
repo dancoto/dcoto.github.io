@@ -10,7 +10,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "git checkout master; find build  -type f -exec mv {} . \\; find static  -type f -exec mv {} . \\; git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
+    "deploy": "git checkout master; find build -type f -exec mv {} . \\; find static -type f -exec mv {} . \\; git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
