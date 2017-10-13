@@ -10,10 +10,14 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "git checkout master; find build -type f -name '*.html' -exec sed -i 's:/static/js/:/:g' {} \\;; find build -type f -exec mv {} . \\;;  git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
+    "deploy": "npm run adjust; git checkout master; find build -type f -exec mv {} . \\;;  git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
+    "adjust": "replace-in-file /static/css/ / build/**/*.html; replace-in-file /static/js/ / build/**/*.js,build/**/*.html; replace-in-file /static/media/ / build/**/*.js,build/**/*.html",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "replace-in-file": "^3.0.0-beta.2"
   }
 }
