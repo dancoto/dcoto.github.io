@@ -10,12 +10,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "npm run predeploy; npm run checkout-master; npm run flatten; npm run publish;",
-    "flatten-build": "find build  -type f -exec mv {} . \\",
-    "flatten-static": "find static  -type f -exec mv {} . \\",
-    "flatten": "npm run flatten-build; npm run flatten-static",
-    "checkout-master": "git checkout master",
-    "publish": "git add -A; git commit -a -m 'deploy'; git push; git checkout develop", 
+    "deploy": "git checkout master; find build  -type f -exec mv {} . \\; find static  -type f -exec mv {} . \\; git add -A; git commit -a -m 'deploy'; git push; git checkout develop;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
