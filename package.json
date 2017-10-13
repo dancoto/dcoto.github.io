@@ -14,7 +14,7 @@
     "nodeploy": "npm run build; npm run adjust; git checkout master; find build -type f -exec mv {} . \\;;",
     "adjust-files": "replace-in-file /\/?static\/[a-z]+\//g / build/**/*.html,build/**/*.js,build/**/*.css --isRegex;",
     "adjust-references": "replace-in-file /\/?static\/[a-z]+\//g '' build/**/*.json,build/**/*.map --isRegex;",
-    "adjust":"npm run adjust-files; npm run adjust-manifest",
+    "adjust":"npm run adjust-files; npm run adjust-references",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
